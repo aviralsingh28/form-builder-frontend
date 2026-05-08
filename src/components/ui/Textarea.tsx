@@ -1,0 +1,13 @@
+"use client";
+
+import { forwardRef } from "react";
+import { cn } from "@/lib/cn";
+
+export type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+
+export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function Textarea(
+  { className, ...props },
+  ref,
+) {
+  return <textarea ref={ref} className={cn("ui-textarea", className)} {...props} />;
+});
